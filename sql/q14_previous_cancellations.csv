@@ -1,0 +1,5 @@
+cancellation_history,total_bookings,total_cancellations,cancellation_rate
+2-3 Previous Cancellations,181,58,32.04
+No Previous Cancellations,112906,38282,33.91
+4+ Previous Cancellations,252,170,67.46
+1 Previous Cancellation,6051,5714,94.43

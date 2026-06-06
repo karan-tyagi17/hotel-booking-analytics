@@ -1,0 +1,13 @@
+arrival_date_month,arrival_month_num,total_bookings,total_cancellations,cancellation_rate
+January,1,5929,1807,30.48
+February,2,8068,2696,33.42
+March,3,9794,3149,32.15
+April,4,11089,4524,40.8
+May,5,11791,4677,39.67
+June,6,10939,4535,41.46
+July,7,12661,4742,37.45
+August,8,13877,5239,37.75
+September,9,10508,4116,39.17
+October,10,11160,4246,38.05
+November,11,6794,2122,31.23
+December,12,6780,2371,34.97

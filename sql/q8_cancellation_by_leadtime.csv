@@ -1,0 +1,6 @@
+lead_time_band,total_bookings,total_cancellations,cancellation_rate
+1. Last minute (0-7 days),19746,1902,9.63
+2. Short (8-30 days),18960,5283,27.86
+3. Medium (31-90 days),29553,11141,37.7
+4. Lonng (91-180 days),26439,11821,44.71
+5. Very long(180+ days),24692,14077,57.01
