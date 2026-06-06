@@ -1,0 +1,6 @@
+stay_length,total_bookings,avg_daily_rate,cancellation_rate
+0. No Stay (0 nights),715,0.0,4.9
+1. Short (1-2 nights),48663,96.42,35.83
+2. Medium (3-5 nights),52243,106.29,38.99
+3. Long (6-10 nights),15653,109.2,35.87
+4. Extended (10+ nights),2116,96.08,36.34

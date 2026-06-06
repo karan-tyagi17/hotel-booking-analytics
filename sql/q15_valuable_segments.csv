@@ -1,0 +1,9 @@
+market_segment,total_bookings,avg_daily_rate,cancellation_rate,true_value_per_booking
+Direct,12606,115.45,15.34,97.73
+Aviation,237,100.14,21.94,78.17
+Online TA,56477,117.2,36.72,74.16
+Offline TA/TO,24219,87.35,34.32,57.38
+Corporate,5295,69.36,18.73,56.36
+Groups,19811,79.48,61.06,30.95
+Complementary,743,2.89,13.06,2.51
+Undefined,2,15.0,100.0,0.0

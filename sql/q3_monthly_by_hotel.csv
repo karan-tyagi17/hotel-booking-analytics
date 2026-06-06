@@ -1,0 +1,25 @@
+arrival_date_month,arrival_month_num,hotel,total_bookings,cancellation_rate
+January,1,City Hotel,3736,39.67
+January,1,Resort Hotel,2193,14.82
+February,2,City Hotel,4965,38.29
+February,2,Resort Hotel,3103,25.62
+March,3,City Hotel,6458,36.95
+March,3,Resort Hotel,3336,22.87
+April,4,City Hotel,7480,46.32
+April,4,Resort Hotel,3609,29.34
+May,5,City Hotel,8232,44.38
+May,5,Resort Hotel,3559,28.77
+June,6,City Hotel,7894,44.69
+June,6,Resort Hotel,3045,33.07
+July,7,City Hotel,8088,40.88
+July,7,Resort Hotel,4573,31.4
+August,8,City Hotel,8983,40.1
+August,8,Resort Hotel,4894,33.45
+September,9,City Hotel,7400,42.03
+September,9,Resort Hotel,3108,32.37
+October,10,City Hotel,7605,42.97
+October,10,Resort Hotel,3555,27.51
+November,11,City Hotel,4357,38.12
+November,11,Resort Hotel,2437,18.92
+December,12,City Hotel,4132,42.11
+December,12,Resort Hotel,2648,23.83
