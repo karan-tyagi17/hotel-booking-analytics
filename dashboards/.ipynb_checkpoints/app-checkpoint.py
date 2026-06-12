@@ -11,7 +11,7 @@ df = pd.read_csv('data/processed/hotel_bookings_cleaned.csv')
 
 st.title(" Hotel Booking Analytics Dashboard")
 st.write("Analyzing 119,390 hotel bookings to understand demand, cancellations and revenue patterns.")
-# ─── SIDEBAR FILTERS ───────────────────────────────
+# ─── SIDEBAR FILTERS ────────
 st.sidebar.header("Filters")
 
 # Hotel filter
@@ -31,7 +31,7 @@ if selected_hotel != "All":
 if selected_month != "All":
     filtered_df = filtered_df[filtered_df['arrival_date_month'] == selected_month]
 
-# ─── KPI CARDS ─────────────────────────────────────
+# ─── KPI CARDS ────────────────────
 st.subheader("Key Metrics")
 
 col1, col2, col3, col4 = st.columns(4)
@@ -51,7 +51,7 @@ with col4:
     avg_lead = round(filtered_df['lead_time'].mean(), 0)
     st.metric("Avg Lead Time", f"{int(avg_lead)} days")
 
-# ─── CHARTS ────────────────────────────────────────
+# ─── CHARTS ──────────────────
 st.subheader("Booking Trends")
 
 # Monthly bookings chart
