@@ -31,7 +31,7 @@ if selected_hotel != "All":
 if selected_month != "All":
     filtered_df = filtered_df[filtered_df['arrival_date_month'] == selected_month]
 
-# ─── KPI CARDS ────────────────────
+# ─── KPI CARDS ────────────────
 st.subheader("Key Metrics")
 
 col1, col2, col3, col4 = st.columns(4)
