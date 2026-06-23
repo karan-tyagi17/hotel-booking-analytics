@@ -1,0 +1,28 @@
+feature,importance
+lead_time,0.2592164071473508
+adr,0.22279159521168312
+deposit_type_Non Refund,0.09685221887764729
+deposit_type_No Deposit,0.08635066260700798
+total_nights,0.06580989829537756
+total_of_special_requests,0.05548266289867181
+previous_cancellations,0.04207992557297355
+market_segment_Online TA,0.02939309556236489
+total_guests,0.023260246849205135
+required_car_parking_spaces,0.022623454961942308
+booking_changes,0.02187107685874454
+customer_type_Transient,0.014446228334593103
+market_segment_Groups,0.01160472537809844
+customer_type_Transient-Party,0.009598011418778135
+market_segment_Offline TA/TO,0.008952831834873286
+hotel_City Hotel,0.0056470356730055
+market_segment_Direct,0.005349093886411552
+hotel_Resort Hotel,0.0043148940557099094
+days_in_waiting_list,0.004042524896167849
+is_repeated_guest,0.0036024918239409114
+market_segment_Corporate,0.003173535372348098
+customer_type_Contract,0.0018715035096339727
+customer_type_Group,0.00048785587276235683
+deposit_type_Refundable,0.0003992658569567807
+market_segment_Complementary,0.0003867166626766892
+market_segment_Aviation,0.0003404970236454744
+market_segment_Undefined,5.154355742905141e-05
