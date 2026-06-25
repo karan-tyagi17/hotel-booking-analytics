@@ -1,3 +1,12 @@
+"""
+Hotel Booking Analytics Dashboard
+-----------------------------------
+Interactive dashboard for exploring hotel booking trends, cancellation 
+patterns, and revenue insights across City Hotel and Resort Hotel.
+
+Run with: py -m streamlit run dashboards/app.py
+"""
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -31,7 +40,7 @@ if selected_hotel != "All":
 if selected_month != "All":
     filtered_df = filtered_df[filtered_df['arrival_date_month'] == selected_month]
 
-# ─── KPI CARDS ────────────────────
+# ─── KPI CARDS ────────────────
 st.subheader("Key Metrics")
 
 col1, col2, col3, col4 = st.columns(4)
@@ -51,7 +60,7 @@ with col4:
     avg_lead = round(filtered_df['lead_time'].mean(), 0)
     st.metric("Avg Lead Time", f"{int(avg_lead)} days")
 
-# ─── CHARTS ──────────────────
+# ─── CHARTS ──────────
 st.subheader("Booking Trends")
 
 # Monthly bookings chart

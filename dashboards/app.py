@@ -1,16 +1,29 @@
+"""
+Hotel Booking Analytics Dashboard
+-----------------------------------
+Interactive dashboard for exploring hotel booking trends, cancellation 
+patterns, and revenue insights across City Hotel and Resort Hotel.
+
+Run with: py -m streamlit run dashboards/app.py
+"""
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+# ─── PAGE CONFIGURATION ─────────────────────────────
 st.set_page_config(
     page_title="Hotel Booking Analytics",
     layout="wide"
 )
 
+# ─── LOAD DATA ───────────────────────────────────────
 df = pd.read_csv('data/processed/hotel_bookings_cleaned.csv')
 
+# ─── HEADER ──────────────────────────────────────────
 st.title(" Hotel Booking Analytics Dashboard")
 st.write("Analyzing 119,390 hotel bookings to understand demand, cancellations and revenue patterns.")
+
 # ─── SIDEBAR FILTERS ────────
 st.sidebar.header("Filters")
 
