@@ -11,15 +11,19 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+# ─── PAGE CONFIGURATION ─────────────────────────────
 st.set_page_config(
     page_title="Hotel Booking Analytics",
     layout="wide"
 )
 
+# ─── LOAD DATA ───────────────────────────────────────
 df = pd.read_csv('data/processed/hotel_bookings_cleaned.csv')
 
+# ─── HEADER ──────────────────────────────────────────
 st.title(" Hotel Booking Analytics Dashboard")
 st.write("Analyzing 119,390 hotel bookings to understand demand, cancellations and revenue patterns.")
+
 # ─── SIDEBAR FILTERS ────────
 st.sidebar.header("Filters")
 
@@ -31,7 +35,7 @@ selected_hotel = st.sidebar.selectbox("Select Hotel", hotel_options)
 month_options = ["All"] + list(df['arrival_date_month'].unique())
 selected_month = st.sidebar.selectbox("Select Month", month_options)
 
-# Apply filters to data
+# ─── APPLY FILTERS ───────────────────────────────────
 filtered_df = df.copy()
 
 if selected_hotel != "All":
@@ -60,7 +64,7 @@ with col4:
     avg_lead = round(filtered_df['lead_time'].mean(), 0)
     st.metric("Avg Lead Time", f"{int(avg_lead)} days")
 
-# ─── CHARTS ──────────
+# ─── BOOKING TRENDS CHART ────────────────────────────
 st.subheader("Booking Trends")
 
 # Monthly bookings chart
@@ -233,3 +237,43 @@ fig8 = px.bar(
     color_continuous_scale='Reds'
 )
 st.plotly_chart(fig8, use_container_width=True)
+
+# ─── AI DATA ANALYST AGENT ───────────────────────────────
+st.divider()
+st.subheader("🤖 Ask the AI Data Analyst")
+st.write("Ask any question about the hotel booking data in plain English.")
+
+# Demo questions
+st.markdown("**Try these questions:**")
+col1, col2 = st.columns(2)
+with col1:
+    st.markdown("- Which segment has highest cancellation rate?")
+    st.markdown("- Show monthly ADR by hotel type")
+with col2:
+    st.markdown("- Which country sends most bookings?")
+    st.markdown("- What factors increase cancellation risk?")
+
+# Question input
+question = st.text_input("Your question:", placeholder="e.g. Which market segment cancels the most?")
+
+if st.button("Ask Agent"):
+    if question:
+        with st.spinner("Thinking..."):
+            import sys
+            import os
+            sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            from src.agent import ask_agent
+
+            output = ask_agent(question)
+
+            st.markdown("**SQL Generated:**")
+            st.code(output['sql'], language='sql')
+
+            if output['result']:
+                st.markdown("**Result:**")
+                st.dataframe(pd.DataFrame(output['result']))
+
+            st.markdown("**Business Explanation:**")
+            st.success(output['explanation'])
+    else:
+        st.warning("Please type a question first!")
